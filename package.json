@@ -10,7 +10,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "api": "node server/api.js"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
