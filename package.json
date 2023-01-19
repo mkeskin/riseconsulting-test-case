@@ -5,10 +5,9 @@
   "private": true,
   "scripts": {
     "api": "node api/index.js",
-    "dev": "concurrently \"next dev\" \"tailwindcss -i src/styles/globals.scss -o public/styles/main.css -w\"",
+    "dev": "concurrently \"next dev\" \"tailwindcss -i src/styles/globals.scss -o public/styles/main.css -w\" \"npm run api\"",
     "build": "tailwindcss -m -i src/styles/globals.scss -o public/styles/main.css && next build",
     "start": "next start",
-    "fire": "concurrently \"npm run dev\" \"npm run api\"",
     "lint": "next lint",
     "test": "jest",
     "test:watch": "jest --watch",
