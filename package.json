@@ -5,13 +5,15 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "api": "node server/api.js",
     "dev": "concurrently \"next dev\" \"tailwindcss -i src/styles/globals.scss -o public/styles/main.css -w\"",
     "build": "tailwindcss -m -i src/styles/globals.scss -o public/main.css && next build",
     "start": "next start",
+    "fire": "concurrently \"npm run dev\" \"npm run api\"",
     "lint": "next lint",
     "test": "jest",
     "test:watch": "jest --watch",
-    "api": "node server/api.js"
+    "test:coverage": "jest --coverage"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
