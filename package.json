@@ -4,14 +4,16 @@
   "author": "Mustafa Keskin",
   "private": true,
   "scripts": {
-    "api": "node api/index.js",
-    "dev": "concurrently \"next dev\" \"tailwindcss -i src/styles/globals.scss -o public/styles/main.css -w\" \"npm run api\"",
-    "build": "tailwindcss -m -i src/styles/globals.scss -o public/styles/main.css && next build",
+    "api": "node server/index.js",
+    "dev": "concurrently \"next dev\" \"npm run tailwind -- --watch\" \"npm run api\"",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "tailwind": "tailwindcss -i src/styles/globals.scss -o public/styles/main.css",
+    "postinstall": "npm run tailwind"
   },
   "dependencies": {
     "clsx": "^1.2.1",

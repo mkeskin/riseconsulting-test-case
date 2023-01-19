@@ -1,7 +1,8 @@
 var http = require('http')
+var url = require('url')
 var port = process.env.PORT || 3001
 
-var content = [
+var priorities = [
   {
     key: '3-urgent',
     name: 'Urgent',
@@ -18,7 +19,7 @@ var content = [
 
 //create a server object:
 http
-  .createServer(function (_, res) {
+  .createServer(function (req, res) {
     const headers = {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET',
@@ -27,10 +28,19 @@ http
       /** add other headers as per requirement */
     }
 
-    res.writeHead(200, headers)
-    res.write(JSON.stringify(content))
+    const path = url.parse(req.url).pathname
+
+    if (path === '/priorities') {
+      res.writeHead(200, headers)
+      res.write(JSON.stringify(priorities))
+    }
+
     res.end()
   })
   .listen(port, function () {
     console.log('Server started at port ' + port)
   })
+
+module.exports = {
+  priorities,
+}
