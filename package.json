@@ -6,14 +6,13 @@
   "scripts": {
     "api": "node server/index.js",
     "dev": "concurrently \"next dev\" \"npm run tailwind -- --watch\" \"npm run api\"",
-    "build": "next build",
+    "build": "concurrently \"next build\" \"npm run tailwind\"",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "tailwind": "tailwindcss -i src/styles/globals.scss -o public/styles/main.css",
-    "postinstall": "npm run tailwind"
+    "tailwind": "tailwindcss -i src/styles/globals.scss -o public/styles/main.css"
   },
   "dependencies": {
     "clsx": "^1.2.1",
