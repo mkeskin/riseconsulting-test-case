@@ -33,6 +33,8 @@ const NewJobForm = ({ maxLength = 255 }: NewJobFormProps) => {
 
   useEffect(() => {
     getPriorities()
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const [state, setState] = useReducerState(emptyState)

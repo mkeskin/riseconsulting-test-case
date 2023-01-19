@@ -54,6 +54,8 @@ const Selectbox = forwardRef<HTMLSelectElement, SelectboxProps>(
       if (selecteds.length === 0) {
         setSelecteds(Array.from(selectRef.current.selectedOptions))
       }
+
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectRef?.current?.selectedOptions])
 
     const setSelectOption = (index: number) => {

@@ -31,6 +31,8 @@ const ExampleData = () => {
     if (!data) {
       store.set('jobs', examples)
     }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return <></>

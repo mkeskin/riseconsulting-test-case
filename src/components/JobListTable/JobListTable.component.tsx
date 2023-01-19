@@ -98,6 +98,8 @@ const JobListTable = ({}: JobListTableProps) => {
     }
 
     loadJobs()
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
@@ -165,7 +167,9 @@ const JobListTable = ({}: JobListTableProps) => {
         className: '!text-center',
       },
     ],
-    [data, priorities]
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [data, priorities, colors]
   )
 
   const rows = data.map((item: Job & { actions: ReactElement }) => {
