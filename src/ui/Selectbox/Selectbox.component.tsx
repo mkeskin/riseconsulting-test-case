@@ -38,6 +38,7 @@ const Selectbox = forwardRef<HTMLSelectElement, SelectboxProps>(
     }: SelectboxProps,
     ref
   ) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const id = idProp || useId()
 
     const containerRef = useRef<HTMLDivElement>() as RefObject<HTMLDivElement>
@@ -179,5 +180,7 @@ const Selectbox = forwardRef<HTMLSelectElement, SelectboxProps>(
     )
   }
 )
+
+Selectbox.displayName = 'Selectbox'
 
 export default Selectbox

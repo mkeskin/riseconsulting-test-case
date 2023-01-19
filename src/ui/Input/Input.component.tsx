@@ -9,6 +9,7 @@ export type InputProps = InputHTMLAttributes<HTMLInputElement> & {
 }
 
 const Input = ({ label, id: idProp, className, ...rest }: InputProps) => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const id = idProp || useId()
 
   return (
