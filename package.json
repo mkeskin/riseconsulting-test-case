@@ -13,7 +13,8 @@
     "lint": "next lint",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "now-build": "next build"
   },
   "dependencies": {
     "clsx": "^1.2.1",
