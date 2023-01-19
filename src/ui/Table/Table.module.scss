@@ -1,0 +1,37 @@
+.outside {
+  @apply border border-stone-100 md:rounded-b-lg;
+}
+
+.table {
+  @apply table-auto min-w-full divide-y divide-stone-100;
+
+  thead {
+    @apply bg-blue-50;
+  }
+
+  th {
+    &:not(.sr-only) {
+      @apply py-3.5 px-3 text-left text-sm font-semibold text-stone-900;
+    }
+
+    &.sr-only {
+      @apply relative py-3.5 pl-3 pr-4 sm:pr-6;
+    }
+
+    .sort-icon {
+      @apply invisible ml-2 flex-none rounded text-stone-400;
+
+      &.sorted {
+        @apply visible bg-stone-200;
+      }
+
+      .icon {
+        @apply h-5 w-5 transition-transform;
+      }
+    }
+  }
+
+  td {
+    @apply whitespace-nowrap px-3 py-4 text-sm text-stone-500;
+  }
+}
