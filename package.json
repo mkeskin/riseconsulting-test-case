@@ -16,6 +16,12 @@
     "test:coverage": "jest --coverage",
     "now-build": "next build"
   },
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/next"
+    }
+  ],
   "dependencies": {
     "clsx": "^1.2.1",
     "store": "^2.0.12",
