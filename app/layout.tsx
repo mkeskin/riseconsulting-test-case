@@ -1,6 +1,8 @@
 // These styles apply to every route in the application
 import '../public/styles/main.css'
 
+import Header from '@components/Header'
+
 export default function RootLayout({
   children,
 }: {
@@ -8,7 +10,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className="max-w-6xl mx-auto px-4 lg:px-10">
+          <Header />
+          <main>{children}</main>
+        </div>
+      </body>
     </html>
   )
 }
