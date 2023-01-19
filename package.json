@@ -7,7 +7,7 @@
   "scripts": {
     "api": "node api/index.js",
     "dev": "concurrently \"next dev\" \"tailwindcss -i src/styles/globals.scss -o public/styles/main.css -w\"",
-    "build": "tailwindcss -m -i src/styles/globals.scss -o public/main.css && next build",
+    "build": "tailwindcss -m -i src/styles/globals.scss -o public/styles/main.css && next build",
     "start": "next start",
     "fire": "concurrently \"npm run dev\" \"npm run api\"",
     "lint": "next lint",
