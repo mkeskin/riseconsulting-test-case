@@ -38,6 +38,9 @@ node_modules/
 .next
 out
 
+# Tailwindcss build output
+public/styles/main.css
+
 # misc
 .DS_Store
 *.pem
