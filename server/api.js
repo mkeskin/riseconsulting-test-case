@@ -3,15 +3,15 @@ var port = process.env.PORT || 3001
 
 var content = [
   {
-    key: 'urgent',
+    key: '3-urgent',
     name: 'Urgent',
   },
   {
-    key: 'regular',
+    key: '2-regular',
     name: 'Regular',
   },
   {
-    key: 'trivial',
+    key: '1-trivial',
     name: 'Trivial',
   },
 ]
@@ -19,7 +19,15 @@ var content = [
 //create a server object:
 http
   .createServer(function (_, res) {
-    res.writeHead(200, { 'Content-Type': 'application/json' })
+    const headers = {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET',
+      'Access-Control-Max-Age': 2592000, // 30 days
+      'Content-Type': 'application/json',
+      /** add other headers as per requirement */
+    }
+
+    res.writeHead(200, headers)
     res.write(JSON.stringify(content))
     res.end()
   })
