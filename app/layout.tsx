@@ -1,5 +1,5 @@
 // These styles apply to every route in the application
-import '../public/styles/main.css'
+import '../src/styles/globals.scss'
 
 import Header from '@components/Header'
 
