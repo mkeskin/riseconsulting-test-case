@@ -1,0 +1,19 @@
+.modal {
+  @apply relative z-10;
+
+  .backdrop {
+    @apply fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity;
+  }
+
+  .container {
+    @apply fixed inset-0 z-10 overflow-y-auto;
+  }
+
+  .dialog {
+    @apply flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0;
+  }
+
+  .content {
+    @apply relative transform rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm md:max-w-md lg:max-w-lg sm:p-6;
+  }
+}
