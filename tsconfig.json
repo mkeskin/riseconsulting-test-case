@@ -22,7 +22,9 @@
     "baseUrl": "./",
     "paths": {
       "@styles/*": ["src/styles/*"],
+      "@vectors/*": ["src/vectors/*"],
       "@components/*": ["src/components/*"],
+      "@ui/*": ["src/ui/*"],
       "@utils/*": ["src/utils/*"],
       "@store/*": ["src/store/*"]
     }
